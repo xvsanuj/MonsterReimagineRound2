@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
+@font-face {
   font-family: Gilroy;
   font-weight: 950;
   src: url(/src/assets/Gilroy/Gilroy-Black.ttf);
@@ -31,7 +31,7 @@
   font-family: Gilroy;
   font-weight: 100;
   src: url(/src/assets/Gilroy/Gilroy-UltraLight.ttf);
-} */
+}
 
 *{
   font-family: Gilroy;
