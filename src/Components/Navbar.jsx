@@ -16,8 +16,8 @@ const Navbar = () => {
         </div>
         <div className="w-[30%] flex items-center justify-end">
           <div className="h-12 flex items-center drop-shadow-2xl justify-evenly w-32 rounded-full bg-orange-600">
-          <CiSearch className="text-2xl text-white"/>
-          <div className="hamburger w-10 rounded-full h-10 flex items-center justify-center gap-2 flex-col">
+          <CiSearch className="text-2xl cursor-pointer text-white"/>
+          <div className="hamburger cursor-pointer w-10 rounded-full h-10 flex items-center justify-center gap-2 flex-col">
             <span className="h-[0.15rem] inline-block w-8 bg-white rounded-full"></span>
             <span className="h-[0.15rem] inline-block w-8 bg-white rounded-full"></span>
           </div>
