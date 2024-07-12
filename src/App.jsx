@@ -5,7 +5,7 @@ import Loader from './Components/Loader'
 const App = () => {
   return (
     <>
-      {/* <Loader/> */}
+      <Loader/>
       <Navbar/>
     </>
   )
