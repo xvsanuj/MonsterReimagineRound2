@@ -92,7 +92,7 @@ const Navbar = () => {
         </motion.div>
       </MotionConfig>
 
-      <div className="flex items-center justify-end">
+      <div className="h-15 w-[11vw] flex items-center justify-end">
         <MotionConfig
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
