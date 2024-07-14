@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <>
-      {/* <Loader /> */}
+      <Loader />
       <div className="h-full w-full overflow-hidden">
         <Navbar />
         <Home />
