@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, MotionConfig } from 'framer-motion'
+import { motion, MotionConfig } from 'framer-motion'
 import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 
@@ -30,22 +30,17 @@ const Navbar = () => {
   };
 
   const navLinks = ["Store", "Phones", "Tablets", "TV & Smart Home", "Smart Watch & Audio"];
-  // const menuLinks = ["Home", "About", "Services", "Portfolio", "Blog", "Contact"];
 
   return (
-    <div className="h-[10vh] border-b-[1px] w-full flex items-center justify-between px-20 relative">
-      <div className="flex items-center w-[30%] gap-2">
-        <h1 className="text-2xl font-semibold tracking-tighter">Xiaomi</h1>
+    <div className="h-[10vh] border-b-[1px] w-full flex items-center justify-between px-10 fixed z-30">
+      <div className="flex items-center px-2 gap-1">
+        <div className="logo-cont size-16">
+          <div className="logo"></div>
+        </div>
         <span className="h-6 w-[2px] rounded-full bg-zinc-600"></span>
-        <p className="text-xs font-semibold leading-none">India's No.1 <br /> Smartphone Brand</p>
+        <h1 className="text-2xl tracking-wide px-4">Xiaomi</h1>
       </div>
-      <div className="flex items-center justify-center  text-sm font-medium gap-5">
-        <h1>Store</h1>
-        <h1>Phones</h1>
-        <h1>Tablets</h1>
-        <h1>TV & Smart Home</h1>
-        <h1>Smart Watch & Audio</h1>
-      </div>
+
 
       <MotionConfig
         transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -65,7 +60,7 @@ const Navbar = () => {
               top: "32%",
             },
           }}
-          className="toggle-menu absolute top-[10%] left-[50%] -translate-x-[51%] -translate-y-[0%] w-[95vw] h-[90vh] bg-[#EA580C] rounded-2xl p-10">
+          className="toggle-menu absolute z-20 top-[10%] left-[50%] -translate-x-[50%] -translate-y-[0%] w-[95vw] h-[90vh] bg-[#EA580C] rounded-2xl p-10">
           <div className="toggle-cont flex w-full h-full">
             <div className="nav-left flex items-center w-1/2 h-full">
               <div className="nav-links flex flex-col gap-5 px-4">
@@ -83,9 +78,8 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-            <div className="nav-right w-1/2 h-full flex items-center justify-center">
-              <div className="right-img w-1/2 h-[50vh]">
-                <img className='w-full h-full object-cover' src="https://lukaszadam.com/images/free-illustrations/website_work.svg" alt="" />
+            <div className="nav-right w-1/2 h-full flex items-center justify-end">
+              <div className="right-img w-[90%] h-[100%]">
               </div>
             </div>
           </div>
@@ -106,7 +100,7 @@ const Navbar = () => {
                 width: ["3.5vw", "11vw", "11vw"],
               }
             }}
-            className="w-[11vw] h-12 flex items-center drop-shadow-2xl justify-evenly rounded-full bg-orange-600">
+            className="w-[11vw] h-12 flex items-center shadow-md justify-evenly rounded-full bg-orange-600">
             <motion.div
               animate={btnClick ? "open" : "closed"}
               variants={{
@@ -125,7 +119,7 @@ const Navbar = () => {
             <motion.div
               onClick={btnClicked}
               animate={btnClick ? "open" : "closed"}
-              className="hamburger cursor-pointer togggle-btn w-[4.5vw] h-[4.5vw] relative rounded-full">
+              className="hamburger cursor-pointer togggle-btn w-[4.5vw] h-[4.5vw] relative z-30 rounded-full">
               <motion.span
                 style={{ top: "40%", left: "50%", x: "-50%", y: "-50%" }}
                 variants={{
