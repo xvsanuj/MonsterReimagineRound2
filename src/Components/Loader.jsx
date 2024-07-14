@@ -102,7 +102,7 @@ const Loader = () => {
                                         </div>
                                         <div className="loader-text absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[10%]">
                                             <div className="loading vido size-16 rounded-[24%] ">
-                                                <video className='' src=""></video>
+                                                {/* <video className='' src=""></video> */}
                                             </div>
                                         </div>
                                     </div>
