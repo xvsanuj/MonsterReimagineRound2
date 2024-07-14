@@ -1,7 +1,6 @@
 import { easeInOut, motion, MotionConfig } from 'framer-motion'
 import React, { useState } from 'react'
-import gsap from "gsap";
-import { MdOutlineSubdirectoryArrowRight } from "react-icons/md";
+import gsap, { Power2 } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
@@ -18,7 +17,7 @@ const Loader = () => {
     const t1 = gsap.timeline();
     useGSAP(() => {
 
-        t1.from(".loader-text h1", {
+        t1.from(".loader-text .loading ", {
             y: -100,
             opacity: 0,
             duration: 1,
@@ -83,7 +82,8 @@ const Loader = () => {
                             clipPath: "inset(0 0 100% 0)"
                         },
                         closed: {
-                            clipPath: "inset(0 0 0 0)"
+                            clipPath: "inset(0 0 0 0)",
+                            transform: { ease: Power2.easeOut }
                         }
                     }}
                     className="w-full h-screen bg-[#333] fixed bottom-0 left-[50%] -translate-x-[50%] z-50">
@@ -101,7 +101,9 @@ const Loader = () => {
                                             <h1 className='text-white text-[1vw] opacity-0'>0%</h1>
                                         </div>
                                         <div className="loader-text absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[10%]">
-                                            <h1 className='text-white text-3xl'>MI</h1>
+                                            <div className="loading vido size-16 rounded-[24%] ">
+                                                <video className='' src=""></video>
+                                            </div>
                                         </div>
                                     </div>
                                     <motion.button
