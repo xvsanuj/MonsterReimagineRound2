@@ -23,8 +23,8 @@ const App = () => {
   return (
     <>
         {/* <Loader /> */}
-        <Navbar />
-        <Home />
+        <Navbar/>
+        <Home/>
     </>
   )
 }
