@@ -20,17 +20,11 @@ const App = () => {
     requestAnimationFrame(raf);
   }
   lenisFn();
-
   return (
     <>
-      <Loader />
-      <div className="h-full w-full overflow-hidden">
+        {/* <Loader /> */}
         <Navbar />
         <Home />
-
-      <div className="spa h-[50vh]"></div>
-
-      </div>
     </>
   )
 }

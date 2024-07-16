@@ -1,38 +1,26 @@
-import { easeInOut, motion, MotionConfig } from 'framer-motion'
-import React, { useState } from 'react'
-import gsap, { Power2 } from "gsap";
+import { easeOut, motion, MotionConfig } from 'framer-motion'
+import { useState } from 'react'
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
-
-
-
 const Loader = () => {
-    const [isHovered, setIsHovered] = useState(false);
     const [btnClick, setBtnClick] = useState(false)
     const btnClicked = () => {
         setBtnClick(!btnClick);
     }
-
-
     const t1 = gsap.timeline();
     useGSAP(() => {
-
         t1.from(".loader-text .loading ", {
-            y: -100,
+            y: "-100vh",
             opacity: 0,
             duration: 1,
             stagger: 0.5,
-            ease: 'easeInOut',
-
+            ease: 'back.inOut',
         })
-
         t1.to(".circle", {
             strokeDashoffset: -380,
             duration: 2.3,
-            ease: 'easeInOut',
+            ease: 'back.inOut',
         }, "p");
-
-
         t1.to(
             '.loader-prog h1',
             {
@@ -68,12 +56,11 @@ const Loader = () => {
             },
         );
 
-    },);
-
+    });
     return (
         <>
             <MotionConfig
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                transition={{ duration: 1.2, ease: 'anticipate' }}
             >
                 <motion.div
                     animate={btnClick ? "open" : "closed"}
@@ -83,10 +70,10 @@ const Loader = () => {
                         },
                         closed: {
                             clipPath: "inset(0 0 0 0)",
-                            transform: { ease: Power2.easeOut }
+                            transform: { ease: easeOut}
                         }
                     }}
-                    className="w-full h-screen bg-[#333] fixed bottom-0 left-[50%] -translate-x-[50%] z-50">
+                    className="w-full h-screen bg-[#111] fixed bottom-0 left-[50%] -translate-x-[50%] z-50">
                     <div className="relative flex w-full h-full max-w-screen-xl mx-auto text-center">
                         <MotionConfig>
                             <div className="w-[50vw] h-[70vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -106,26 +93,11 @@ const Loader = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <motion.button
+                                    <button
                                         onClick={btnClicked}
-                                        whileHover={{ scale: 1.1 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}
-                                        className="primary-btn h-8 w-34 px-4 py-4 bg-white hover:bg-gray-100 text-black flex flex-col items-center overflow-hidden rounded-full">
-                                        <motion.div
-                                            animate={{ y: isHovered ? "-200%" : "-50%" }}
-                                            transition={{ ease: easeInOut }}
-                                            className="flex translate-y-full w-full items-center justify-between gap-4 px-2">
-                                            <span className="text-sm tracking-[0.4vw]">START</span>
-                                        </motion.div>
-                                        <motion.div
-                                            animate={{ y: isHovered ? "-150%" : 0 }}
-                                            transition={{ ease: easeInOut }}
-                                            className="flex translate-y-full w-full items-center justify-between gap-4 px-2">
-                                            <span className="text-sm tracking-[0.4vw]">START</span>
-                                        </motion.div>
-                                    </motion.button>
+                                        className="px-10 hover:duration-200 hover:transition-all py-2 uppercase text-sm tracking-widest bg-white hover:border-[1px] hover:border-white hover:bg-[#333] hover:text-white text-black flex flex-col items-center overflow-hidden rounded-full">
+                                        Start
+                                    </button>
                                 </div>
                             </div>
 
