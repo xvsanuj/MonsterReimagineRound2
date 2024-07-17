@@ -4,10 +4,9 @@ import Loader from './Components/Loader'
 import Home from './Components/Home'
 import Lenis from "lenis";
 import Canvas from './Components/Canvas';
-
-
+import Explore from './Components/Explore';
+import Visiting from './Components/Visiting';
 const App = () => {
-
   function lenisFn() {
     const lenis = new Lenis({
       wheelMultiplier: 2,
@@ -27,6 +26,8 @@ const App = () => {
         <Navbar/>
         <Home/>
         <Canvas/>
+        <Explore/>
+        <Visiting/>
     </>
   )
 }
