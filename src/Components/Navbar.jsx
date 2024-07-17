@@ -2,7 +2,7 @@ import { CiSearch } from "react-icons/ci";
 const Navbar = () => {
   const navLinks = ["Store", "Phones", "Tablets", "TV & Smart Home", "Smart Watch & Audio"];
   return (
-    <div className="h-[10vh] fixed justify-between flex items-center px-20 w-full border-b-[1px] border-zinc-800">
+    <div className="h-[10vh] fixed justify-between flex items-center px-20 w-full border-b-[1px] border-zinc-800 z-50">
       <div className="w-[25%] flex items-center gap-4">
         <h1 className="text-3xl font-semibold tracking-tighter">Xiaomi</h1>
         <span className="h-8 w-[3px] inline-block bg-zinc-800 rounded-full"></span>

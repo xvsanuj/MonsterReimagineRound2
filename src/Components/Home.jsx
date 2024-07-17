@@ -3,8 +3,8 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='h-screen pt-[10vh]'>
-      <div className='flex h-full'>
-        <div className='h-full w-[60%] flex'>
+      <div className='flex gap-[1%] h-full'>
+        <div className='h-full w-[59.5%] flex'>
           <div className='w-1/2 h-full'>
             <div className='h-1/2 border-b-[1px] border-zinc-800 w-full flex flex-col items-center justify-center'>
               <h1 className='text-6xl font-black'>Xiaomi</h1>
@@ -27,8 +27,19 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='h-full w-[40%]'>
-
+        <div className='h-full flex w-[39.5%] border-x-[1px] border-zinc-800'>
+          <div className='w-[80%] h-full flex flex-col gap-[3%] border-r-[1px] border-zinc-800'>
+            <div className='h-[59%] w-full border-b-[1px] border-zinc-800'>
+              <img className='h-full w-full object-cover' src="/src/assets/Images/Home/3.jpg" alt="" />
+            </div>
+            <div className='h-[38%] w-full border-y-[1px] border-zinc-800'>
+            <img className='h-full w-full object-cover' src="/src/assets/Images/Home/2.jpg" alt="" />
+            </div>
+          </div>
+          <div className='h-full flex items-center justify-between py-20 flex-col w-[20%]'>
+            <h1 className='-rotate-90 origin-left whitespace-nowrap mt-36 ml-48 font-semibold'>Scroll Down To Next Page</h1>
+            <h1 className='-rotate-90 text-2xl font-black whitespace-nowrap origin-left tracking-tighter ml-16'>PAGE 1</h1>
+          </div>
         </div>
       </div>
     </div>
