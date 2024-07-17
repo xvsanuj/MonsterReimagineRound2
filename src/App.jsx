@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Loader from './Components/Loader'
 import Home from './Components/Home'
 import Lenis from "lenis";
+import Canvas from './Components/Canvas';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         {/* <Loader /> */}
         <Navbar/>
         <Home/>
+        <Canvas/>
     </>
   )
 }
