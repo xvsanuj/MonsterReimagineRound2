@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Visiting = () => {
   return (
     <div className='h-screen w-full flex'>
