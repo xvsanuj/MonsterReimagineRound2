@@ -16,7 +16,7 @@ const Home = () => {
             </div>
           </div>
           <div className='relative w-1/2 h-full border-x-[1px] border-zinc-800'>
-            <img className='h-full w-full object-cover' src="/src/assets/Images/Home/4.jpg" alt="" />
+            <img className='h-full w-full object-cover' src="https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/4.jpg" alt="" />
             <div className='absolute bg-[#55504c] bottom-5  left-5 h-28 w-72'>
               <h1 className='bg-[#55504c] font-normal uppercase text-2xl tracking-tighter pt-3 px-5'>every shot iconic</h1>
               <span className='h-[1px] w-[80%] bg-zinc-200 inline-block mx-5'></span>
@@ -30,10 +30,10 @@ const Home = () => {
         <div className='h-full flex w-[39.5%] border-x-[1px] border-zinc-800'>
           <div className='w-[80%] h-full flex flex-col gap-[3%] border-r-[1px] border-zinc-800'>
             <div className='h-[59%] w-full border-b-[1px] border-zinc-800'>
-              <img className='h-full w-full object-cover' src="/src/assets/Images/Home/3.jpg" alt="" />
+              <img className='h-full w-full object-cover' src="https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/3.jpg" alt="" />
             </div>
             <div className='h-[38%] w-full border-y-[1px] border-zinc-800'>
-            <img className='h-full w-full object-cover' src="/src/assets/Images/Home/2.jpg" alt="" />
+            <img className='h-full w-full object-cover' src="https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/2.jpg" alt="" />
             </div>
           </div>
           <div className='h-full flex items-center justify-between py-20 flex-col w-[20%]'>
