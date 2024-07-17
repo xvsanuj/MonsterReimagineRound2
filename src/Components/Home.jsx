@@ -16,12 +16,13 @@ const Home = () => {
             </div>
           </div>
           <div className='relative w-1/2 h-full border-x-[1px] border-zinc-800'>
-            <img className='h-full w-full object-cover' src="./src/assets/Images/Home/4.jpg" alt="" />
+            <img className='h-full w-full object-cover' src="/src/assets/Images/Home/4.jpg" alt="" />
             <div className='absolute bg-[#55504c] bottom-5  left-5 h-28 w-72'>
               <h1 className='bg-[#55504c] font-normal uppercase text-2xl tracking-tighter pt-3 px-5'>every shot iconic</h1>
               <span className='h-[1px] w-[80%] bg-zinc-200 inline-block mx-5'></span>
-              <div>
-                
+              <div className='flex items-center bg-[#55504c] px-5 justify-between'>
+                <h1 className='bg-[#55504c] leading-8'>Quick View</h1>
+                <button className='bg-[#55504c] px-6 py-1 border-[1px] rounded-full mr-4'>Buy Now</button>
               </div>
             </div>
           </div>
