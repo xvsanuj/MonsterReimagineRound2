@@ -6,6 +6,7 @@ import Lenis from "lenis";
 import Canvas from './Components/Canvas';
 import Explore from './Components/Explore';
 import Visiting from './Components/Visiting';
+import Footer from './Components/Footer';
 const App = () => {
   function lenisFn() {
     const lenis = new Lenis({
@@ -28,6 +29,7 @@ const App = () => {
         <Canvas/>
         <Explore/>
         <Visiting/>
+        <Footer/>
     </>
   )
 }
