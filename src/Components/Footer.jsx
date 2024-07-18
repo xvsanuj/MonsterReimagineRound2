@@ -1,5 +1,6 @@
-import React from 'react'
-
+import { FaFacebook } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <div className='h-[90vh] w-full flex'>
@@ -55,7 +56,22 @@ const Footer = () => {
             </div>
         </div>
         <div className='w-[30%] h-full'>
-
+            <h1 className='text-lg pt-16 font-semibold tracking-tighter'>Follow Mi</h1>
+                <div className="flex items-center gap-5 py-4">
+                    <FaFacebook className="text-black"/>
+                    <FaXTwitter className="text-black"/>
+                    <RiInstagramFill className="text-black"/>
+                </div>
+                <h1 className='text-lg pt-16 font-semibold tracking-tighter'>Let's stay in touch</h1>
+                <input className="px-6 w-96 rounded-xl mt-3 py-2 border-[1px] " type="text" placeholder="Enter email address"/>
+                <div className="border-[1px] w-96 p-4 rounded-xl mt-3 flex gap-4">
+                    <img className="rounded-xl" src="https://i03.appmifile.com/32_operator_in/22/11/2022/9b4d58f78a203b82a56bdd11692d4ba1.png" alt="" />
+                    <div>
+                        <h1 className="text-lg font-semibold tracking-tighter">Get Mi Store App</h1>
+                        <p className="text-xs font-semibold pt-2">Scan for our up-to-date information for better shopping experience</p>
+                        <button className="text-xs font-semibold bg-white px-6 py-2 text-black rounded-lg mt-4">Get Started</button>
+                    </div>
+                </div>
         </div>
     </div>
   )
