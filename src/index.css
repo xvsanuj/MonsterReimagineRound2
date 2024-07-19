@@ -14,6 +14,18 @@
 }
 
 @font-face {
+  font-family: Monument;
+  font-weight: 100;
+  src: url(/src/assets/Monument/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+  font-family: Monument;
+  font-weight: 900;
+  src: url(/src/assets/Monument/MonumentExtended-Ultrabold.otf);
+}
+
+@font-face {
   font-family: Gilroy;
   font-weight: 900;
   src: url(/src/assets/Gilroy/Gilroy-Bold.ttf);
@@ -66,18 +78,6 @@
   width: 100%;
   height: 100%;
 }
-
-
-/* Home */
-
-/* .svg {
-  background-image: url(./assets/Svg/ooorganize.svg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-} */
-
 
 .hero-img {
   background-image: url(./assets/Images/Products/Hero-img.webp
