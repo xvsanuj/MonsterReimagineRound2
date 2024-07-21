@@ -22,7 +22,7 @@ const App = () => {
   }
   lenisFn();
   return (
-    <>
+    <div className=' overflow-x-hidden'>
         {/* <Loader /> */}
         <Navbar/>
         <Home/>
@@ -30,7 +30,7 @@ const App = () => {
         <Explore/>
         <Visiting/>
         <Footer/>
-    </>
+    </div>
   )
 }
 
