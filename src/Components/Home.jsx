@@ -7,12 +7,12 @@ const Home = () => {
       <div className='flex flex-col lg:flex-row gap-[1%] h-full'>
 
         <div className='h-full w-full lg:w-[59.5%] flex flex-col lg:flex-row'>
-          <div className='w-full lg:w-1/2 h-full'>
+          <div className='w-full lg:w-1/2 h-full py-2'>
             <div className='h-1/2 border-b-[1px] border-zinc-800 w-full flex flex-col items-center justify-start'>
               <h1 className='text-3xl sm:text-4xl lg:text-6xl font-black'>Xiaomi</h1>
               <p className='text-sm'>India's No.1 Smartphone Brand</p>
             </div>
-            <div className='h-1/2 border-b-[1px] border-zinc-800 w-full px-5 sm:px-10 lg:px-20 flex justify-center flex-col gap-6'>
+            <div className='h-1/2 border-b-[1px] border-zinc-800 w-full px-5 py-2 md:py-0 sm:px-10 lg:px-20 flex justify-center flex-col gap-6'>
               <p className='leading-none text-center sm:text-left'>Get Attractive Offers For Your First Purchase.</p>
               <button className='px-6 py-2 mb-5 rounded-md bg-zinc-200 text-black self-center sm:self-start'>Explore Now</button>
             </div>
