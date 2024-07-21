@@ -1,5 +1,39 @@
+import gsap from "gsap";
 import { CiSearch } from "react-icons/ci";
 const Navbar = () => {
+
+  var tl = gsap.timeline();
+
+  var handleNavClick = ()=>{
+    // First Animation Loop Complete
+    tl.to(".line1", {
+      width: 0,
+      duration: 0.9,
+      ease: "back.inOut",
+    }, "kinetic")
+    tl.to(".line2", {
+      width: 0,
+      duration: 0.9,
+      ease: "back.inOut",
+    }, "kinetic")
+    // Setting Rotation Before The Animation
+    tl.set(".line1", {
+      rotation: 45,
+      top: 5
+    })
+    tl.set(".line2", {
+      rotation: -45,
+      top: 5
+    })
+    // Performing Final Cross Animation
+    tl.to(".line1", {
+      width: "100%",
+    })
+    tl.to(".line2", {
+      width: "100%",
+    })
+  }
+
   const navLinks = ["Store", "Phones", "Tablets", "TV & Smart Home", "Smart Watch & Audio"];
   return (
     <div className="h-[10vh] fixed justify-between flex items-center px-20 w-full border-b-[1px] border-zinc-800 z-50">
@@ -17,9 +51,9 @@ const Navbar = () => {
       </div>
       <div className="w-[25%] flex items-center gap-8 justify-end">
         <span className="text-2xl cursor-pointer"><CiSearch/></span>
-        <div className="h-3 cursor-pointer flex flex-col justify-between">
-          <span className="inline-block h-[.1rem] bg-white w-10"></span>
-          <span className="inline-block h-[.1rem] bg-white w-10"></span>
+        <div onClick={handleNavClick} className="h-3 w-10 relative cursor-pointer">
+          <span className="line1 absolute left-0 top-0  inline-block h-[.1rem] bg-white w-10"></span>
+          <span className="line2 absolute right-0 bottom-0  inline-block h-[.1rem] bg-white w-10"></span>
         </div>
       </div>
     </div>
