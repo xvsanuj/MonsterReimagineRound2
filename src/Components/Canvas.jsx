@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function getCurrentFrame(index) {
-  return `./src/assets/Canvas/mi_${String(index).padStart(3, '0')}.webp`;
+  return `https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Canvas/mi_${String(index).padStart(3, '0')}.webp`;
 }
 
 const ImageCanvas = ({ scrollHeight, numFrames, width, height }) => {
