@@ -28,7 +28,6 @@ const App = () => {
         <Home/>
         <Canvas/>
         <Explore/>
-        <Visiting/>
         <Footer/>
     </div>
   )
