@@ -108,7 +108,7 @@ const ImageCanvas = ({ scrollHeight, numFrames, width, height }) => {
 
 function Canvas() {
   return (
-    <div className="h-[1325vh] w-full">
+    <div className="h-[633vw] w-full">
       <ImageCanvas scrollHeight={9000} numFrames={339} width={window.innerWidth} height={window.innerHeight} />
     </div>
   );
