@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className='h-[90vh] w-full'>
+    <div data-scroll data-scroll-speed="-5" className='h-[90vh] w-full'>
       <div className='flex flex-col lg:flex-row gap-[1%] h-full'>
         <div className='h-full w-full lg:w-[59.5%] flex flex-col lg:flex-row'>
           <div className='w-full lg:w-1/2 h-full'>

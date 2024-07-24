@@ -7,6 +7,7 @@ import Canvas from './Components/Canvas';
 import Explore from './Components/Explore';
 import Visiting from './Components/Visiting';
 import Footer from './Components/Footer';
+import Products from './Components/Products';
 const App = () => {
   function lenisFn() {
     const lenis = new Lenis({
@@ -28,6 +29,7 @@ const App = () => {
         <Home/>
         <Canvas/>
         <Explore/>
+        <Products/>
         <Footer/>
     </div>
   )
