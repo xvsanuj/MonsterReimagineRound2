@@ -30,6 +30,7 @@ const App = () => {
         <Canvas/>
         <Explore/>
         <Products/>
+        <Visiting/>
         <Footer/>
     </div>
   )
