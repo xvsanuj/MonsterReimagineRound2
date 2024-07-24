@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
     return (
-      <div className='w-full flex flex-col lg:flex-row'>
+      <div className='w-full h-[90vh] flex flex-col lg:flex-row'>
         <div className='w-full lg:w-[70%] h-full flex flex-col lg:flex-row pl-4 lg:pl-20 pt-8 lg:pt-16'>
           <div className='w-full lg:w-[20%] mb-6 lg:mb-0'>
             <h1 className='text-lg font-semibold tracking-tighter'>Support</h1>
@@ -55,7 +55,7 @@ const Footer = () => {
             <p className='text-sm py-2'>Join Our Team</p>
           </div>
         </div>
-        <div className='w-full lg:w-[30%] h-full flex flex-col items-start lg:items-center px-4 lg:px-0'>
+        <div className='w-full lg:w-[30%] h-full flex flex-col items-start px-4 lg:px-0'>
           <h1 className='text-lg pt-8 lg:pt-16 font-semibold tracking-tighter'>Follow Mi</h1>
           <div className="flex items-center gap-4 py-4">
             <FaFacebook className="text-black text-xl"/>
