@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const Visiting = () => { 
     useEffect(() => { 
         gsap.to(".elems-visit", { 
-            x:"-40%", 
+            x:"-80%", 
             y:0, 
             scrollTrigger:{ 
                 trigger: ".elems-visit", 
@@ -32,13 +32,19 @@ const Visiting = () => {
                     <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>Exclusive <br /> Coupons</h1> 
                 </div> 
                 <div className='elem h-full shrink-0 w-[20%] border-l-[1px] border-zinc-800'> 
-                    <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>No.1 <br /> Brand</h1> 
+                    <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>Smart <br /> TV</h1> 
                 </div> 
                 <div className='elem h-full shrink-0 w-[20%] border-l-[1px] border-zinc-800'> 
-                    <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>No.1 <br /> Brand</h1> 
+                    <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>Power <br /> Bank</h1> 
                 </div> 
                 <div className='elem h-full shrink-0 w-[20%] border-l-[1px] border-zinc-800'> 
-                    <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>No.1 <br /> Brand</h1> 
+                    <h1 className='text-7xl tracking-tighter font-[Monument] rotate-90 mt-64'>Audio <br /> Products</h1> 
+                </div> 
+                <div className='elem h-full shrink-0 w-[20%] border-l-[1px] border-zinc-800'> 
+                    <h1 className='text-6xl tracking-tighter font-[Monument] rotate-90 mt-64'>Bestselling <br /> Smartphone's</h1> 
+                </div> 
+                <div className='elem h-full shrink-0 w-[20%] border-l-[1px] border-zinc-800'> 
+                    <h1 className='text-6xl tracking-tighter font-[Monument] rotate-90 mt-64'>No1 <br /> Brand</h1> 
                 </div> 
             </div> 
         </div> 
