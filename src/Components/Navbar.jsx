@@ -1,7 +1,12 @@
 import gsap from "gsap";
 import { useRef, useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { RiTwitterXLine } from "react-icons/ri";
 const Navbar = () => {
+  const h2s = document.querySelectorAll(".navLinks h2")
   const [nav, setNav] = useState();
   const [isAnimating, setIsAnimating] = useState(false);
   var firstRef = useRef(null);
@@ -29,6 +34,11 @@ const Navbar = () => {
         ease: "expo.inOut",
         duration: 1,
       });
+      tl.from(h2s, {
+        y: 100,
+        duration: 1,
+        stagger: .05
+      })
       gsap.to(navFirstRef.current, {
         backgroundColor: "white",
         width: 0,
@@ -82,7 +92,7 @@ const Navbar = () => {
         delay: -0.8,
         top: "-100vh",
         ease: "expo.inOut",
-        duration: 1,
+        duration: 1
       });
       gsap.to(navFirstRef.current, {
         width: "0",
@@ -110,9 +120,6 @@ const Navbar = () => {
       });
     }
   };
-
-
-
   const navLinks = [
     "Store",
     "Phones",
@@ -120,10 +127,36 @@ const Navbar = () => {
     "TV & Smart Home",
     "Smart Watch & Audio",
   ]
+  const navli = [
+    "Stores",
+    "Phones",
+    "Tabletes",
+    "TV & Smartphones",
+    "Smart Watch & Audio",
+    "Discover",
+    "Support"
+  ]
   return (
     <div className="h-12 lg:h-[10vh] justify-between flex items-center px-5 lg:px-20 w-full border-b-[1px] border-zinc-800 z-50">
       <div ref={firstRef} className="h-screen w-full fixed bg-orange-600 z-40 left-0 -top-[100vh]"></div>
-      <div ref={secondRef} className="h-screen w-full fixed bg-black z-40 left-0 -top-[100vh]" ></div>
+      <div ref={secondRef} className="h-screen w-full fixed bg-black z-40 left-0 -top-[100vh] flex " >
+        <div className="bg-black">
+          <div className="bg-black mt-32 navLinks">
+          {
+            navli.map((item, index) => <div className="bg-black overflow-hidden h-[9.5vh] w-fit"><h2 className="w-fit bg-black whitespace-nowrap mx-40 text-5xl my-5 font-semibold tracking-tighter cursor-pointer link">{item}</h2></div>)
+          }
+          </div>
+        </div>
+        <div className="bg-black">
+          <div className="bg-black flex gap-4 absolute top-24 z-50 right-24">
+            <span className="p-4  rounded-full"><FaFacebookF/></span>
+            <span className="p-4  rounded-full"><FaInstagram/></span>
+            <span className="p-4  rounded-full"><FaLinkedinIn/></span>
+            <span className="p-4  rounded-full"><RiTwitterXLine/></span>
+          </div>
+          <img className="-rotate-90 bg-black h-[100vh] absolute top-3 right-20 object-cover" src="./src/assets/Images/Navbar/1.webp" alt="" />
+        </div>
+      </div>
       <div className="lg:w-[25%] flex items-center gap-4">
         <h1 className="text-lg tracking-wide lg:text-3xl font-semibold lg:tracking-tight">
           Xiaomi
