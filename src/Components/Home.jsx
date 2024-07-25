@@ -8,44 +8,36 @@ const Home = () => {
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/13.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/6.jpg",
   ];
-
   const sideImages = [
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/2.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/8.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/1.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/9.jpg",
   ];
-
   const sideImagesOne = [
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/3.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/12.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/7.jpg",
     "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/10.jpg",
   ];
-
-  // Array of text for each image
   const textOptions = [
     ["every shot iconic", "glossy shots", "supportive ui", "no1 brand"],
     ["dynamic display", "sleek design", "powerful performance", "stunning visuals"],
     ["advanced tech", "user-friendly", "innovative features", "top quality"],
     ["fast charging", "high resolution", "long battery life", "compact build"]
   ];
-
-  // Array of taglines for each image
   const taglineOptions = [
     "India's No.1 Smartphone Brand",
     "Leading the Tech Revolution",
     "Innovation Meets Excellence",
     "Quality That Speaks"
   ];
-
   const [currentHeadImage, setCurrentHeadImage] = useState(0);
   const [currentSideImage, setCurrentSideImage] = useState(0);
   const [currentSideImageOne, setCurrentSideImageOne] = useState(0);
   const [zoomClass, setZoomClass] = useState(false);
   const [zoomClassSide, setZoomClassSide] = useState(false);
   const [zoomClassSideOne, setZoomClassSideOne] = useState(false);
-
   useEffect(() => {
     const animateText = () => {
       const h1s = document.querySelectorAll(".teleTexts h1");
@@ -54,7 +46,6 @@ const Home = () => {
         { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 }
       );
     };
-
     const animateTagline = () => {
       const tagline = document.querySelector(".tagline");
       gsap.fromTo(tagline, 
@@ -62,20 +53,15 @@ const Home = () => {
         { y: 0, opacity: 1, duration: 0.5 }
       );
     };
-
     const mainInterval = setInterval(() => {
       setZoomClass(true);
-
       setTimeout(() => {
         setCurrentHeadImage((prevImage) => (prevImage + 1) % mainImages.length);
         setZoomClass(false);
-
-        // Animate text and tagline when image changes
         animateText();
         animateTagline();
       }, 1500);
     }, 5000);
-
     const sideInterval = setInterval(() => {
       setZoomClassSide(true);
       setTimeout(() => {
@@ -83,7 +69,6 @@ const Home = () => {
         setZoomClassSide(false);
       }, 1500);
     }, 5000);
-
     const sideIntervalOne = setInterval(() => {
       setZoomClassSideOne(true);
       setTimeout(() => {
@@ -91,16 +76,13 @@ const Home = () => {
         setZoomClassSideOne(false);
       }, 1500);
     }, 5000);
-
     return () => {
       clearInterval(mainInterval);
       clearInterval(sideInterval);
       clearInterval(sideIntervalOne);
     };
   }, []);
-
   useEffect(() => {
-    // Ensure text is visible and ready before starting animation
     gsap.fromTo(".teleTexts h1", 
       { y: 50, opacity: 0 }, 
       { y: 0, opacity: 1, duration: 1, stagger: 0.1 }
@@ -109,8 +91,7 @@ const Home = () => {
       { y: 10, opacity: 0 }, 
       { y: 0, opacity: 1, duration: 0.5, stagger: .1 }
     );
-  }, [currentHeadImage]); // Run animation when image changes
-
+  }, [currentHeadImage]);
   return (
     <div className='h-[90vh] w-full'>
       <div className='flex flex-col lg:flex-row gap-[1%] h-full'>
