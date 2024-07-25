@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="bg-black">
-          <div className="bg-black flex gap-4 absolute lg:top-[6vw] z-50 lg:right-24 right-20">
+          <div className="bg-black flex gap-4 absolute top-[70vh] lg:top-[6vw] z-50 lg:right-24 right-20">
             <span className="p-4 rounded-full"><FaFacebookF /></span>
             <span className="p-4 rounded-full"><FaInstagram /></span>
             <span className="p-4 rounded-full"><FaLinkedinIn /></span>
@@ -97,9 +97,9 @@ const Navbar = () => {
         ))}
       </div>
       <div className="w-[25%] flex items-center gap-8 justify-end">
-        <div className="fixed h-[3vw] w-[30vw] lg:w-[10vw] rounded-xl flex items-center justify-between pl-2 lg:pl-[1.2vw] z-50">
+        <div className="fixed h-[14vw] lg:h-[3vw] w-[35vw] lg:w-[10vw] rounded-xl flex items-center justify-between pl-3 lg:pl-[1.2vw] z-50">
           <span className="text-2xl fixed z-50 cursor-pointer ml-2"><CiSearch /></span>
-          <div onClick={handleNavClick} className="navMenu h-8 w-10 flex items-center justify-center cursor-pointer fixed z-40 left-[90%]">
+          <div onClick={handleNavClick} className="navMenu h-8 w-10 flex items-center justify-center cursor-pointer fixed z-40 left-[78%] lg:left-[90%]">
             <h1 ref={navFirstRef} className="h-[2px] w-10 monument bg-white rounded-full inline-block absolute bottom-2 right-0"></h1>
             <h1 ref={navSecondRef} className="h-[2px] w-10 monument bg-white rounded-full inline-block absolute top-2 left-0"></h1>
           </div>
