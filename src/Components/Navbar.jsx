@@ -142,8 +142,8 @@ const Navbar = () => {
         ))}
       </div>
       <div className="w-[25%] flex items-center gap-8 justify-end">
-        <div className="fixed h-[6vh] w-[9vw] rounded-xl flex items-center justify-between pl-4 z-50">
-          <span className="text-2xl fixed z-50 cursor-pointer mr-4"><CiSearch/></span>
+        <div className="fixed h-[6vh] w-[10vw] rounded-xl flex items-center justify-between pl-4 z-50">
+          <span className="text-2xl fixed z-50 cursor-pointer ml-2"><CiSearch/></span>
           <div onClick={handleNavClick} className="navMenu h-8 w-10 flex items-center justify-center  cursor-pointer fixed z-40 left-[85%] md:left-[90%] lg:top-5 top-4">
             <h1 ref={navFirstRef} className="h-[2px] w-10 monument bg-white rounded-full inline-block absolute bottom-2 right-0"></h1>
             <h1 ref={navSecondRef} className="h-[2px] w-10 monument bg-white rounded-full inline-block absolute top-2 left-0"></h1>
