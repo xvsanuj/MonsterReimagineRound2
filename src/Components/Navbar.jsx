@@ -83,7 +83,7 @@ const Navbar = () => {
             <span className="p-4 rounded-full"><FaLinkedinIn /></span>
             <span className="p-4 rounded-full"><RiTwitterXLine /></span>
           </div>
-          <img className="-rotate-90 hidden lg:block bg-black h-[100vh] absolute top-3 right-20 object-cover" src="./src/assets/Images/Navbar/1.webp" alt="" />
+          <img className="-rotate-90 hidden lg:block bg-black h-[100vh] absolute top-3 right-20 object-cover" src="https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Navbar/1.webp" alt="" />
         </div>
       </div>
       <div className="lg:w-[25%] flex items-center lg:gap-4 gap-2">

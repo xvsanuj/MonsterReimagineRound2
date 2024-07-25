@@ -8,10 +8,14 @@ function getCurrentFrame(index) {
   return `https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Canvas/mi_${String(index).padStart(3, '0')}.webp`;
 }
 
-const ImageCanvas = ({ scrollHeight, numFrames, width, height }) => {
+const ImageCanvas = ({ scrollHeight, numFrames }) => {
   const canvasRef = useRef(null);
   const [images, setImages] = useState([]);
   const [frameIndex, setFrameIndex] = useState(0);
+  const [canvasSize, setCanvasSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   // Preload images
   function preloadImages() {
@@ -34,8 +38,8 @@ const ImageCanvas = ({ scrollHeight, numFrames, width, height }) => {
   // Set up canvas
   const renderCanvas = () => {
     const context = canvasRef.current.getContext("2d");
-    context.canvas.width = width;
-    context.canvas.height = height;
+    context.canvas.width = canvasSize.width;
+    context.canvas.height = canvasSize.height;
   };
 
   useEffect(() => {
@@ -99,17 +103,28 @@ const ImageCanvas = ({ scrollHeight, numFrames, width, height }) => {
     return () => cancelAnimationFrame(requestId);
   }, [frameIndex, images]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setCanvasSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div style={{ height: scrollHeight }}>
-      <canvas ref={canvasRef} />
+      <canvas ref={canvasRef} style={{ width: '100vw', height: '100vh' }} />
     </div>
   );
 };
 
 function Canvas() {
   return (
-    <div className="h-fit w-full">
-      <ImageCanvas scrollHeight={35000} numFrames={325} width={window.innerWidth} height={window.innerHeight} />
+    <div className="h-fit relative w-full">
+      <ImageCanvas scrollHeight={35000} numFrames={325} />
     </div>
   );
 }

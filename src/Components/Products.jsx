@@ -2,10 +2,10 @@ import React from 'react'
 
 const Products = () => {
   return (
-    <div className='h-screen relative w-full px-20 pt-20'>
+    <div className='min-h-screen relative w-full px-10 lg:px-20 pt-20'>
       <p className='px-6 py-2 text-sm rounded-full bg- border-[1px] border-white w-fit'>Products</p>
-      <h1 className='w-0 whitespace-nowrap pt-5 font-[Monument] text-4xl monument'>Newly Launched</h1>
-      <div className='pt-20 flex gap-6'>
+      <h1 className='w-0 whitespace-nowrap pt-5 font-[Monument] text-2xl lg:text-4xl monument'>Newly Launched</h1>
+      <div className='pt-20 flex flex-col lg:flex-row gap-6'>
         <div className='h-96 w-72 rounded-xl bg-zinc-200 overflow-hidden'>
           <img className='h-[70%] rounded-xl w-full object-cover' src="https://cdn.dxomark.com/wp-content/uploads/medias/post-171171/bdc0df40e7c3983b73802b3d47dd20c4600x60085.jpg" alt="" />
           <h1 className='w-0 whitespace-nowrap text-black font-semibold text-xl bg-zinc-200 px-6 pt-5 leading-none'>Xiaomi 14 Ultra</h1>

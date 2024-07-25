@@ -19,7 +19,7 @@ const Visiting = () => {
     }, []); 
  
     return ( 
-        <div className='hello relative h-[200vh] w-full overflow-x-hidden'> 
+        <div className='hello relative  hidden lg:block h-[200vh] w-full overflow-x-hidden'> 
             <div className="elems-visit w-full h-screen flex"> 
                 <div className='relative h-full shrink-0 w-[40%] border-l-[1px] border-zinc-800'> 
                     <h1 className='text-6xl text-center tracking-tighter font-[Monument] w-72 pt-32 pl-28 whitespace-nowrap'>Visit <br /> Again. <br /> To Xiaomi</h1> 

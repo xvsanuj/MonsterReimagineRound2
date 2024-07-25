@@ -3,22 +3,22 @@ import gsap from "gsap";
 
 const Home = () => {
   const mainImages = [
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/4.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/11.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/13.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/6.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/4.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/11.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/13.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/6.jpg",
   ];
   const sideImages = [
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/2.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/8.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/1.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/9.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/2.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/8.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/1.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/9.jpg",
   ];
   const sideImagesOne = [
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/3.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/12.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/7.jpg",
-    "https://raw.githubusercontent.com/xvsanuj/XiaomiReimagined/main/src/assets/Images/Home/10.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/3.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/12.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/7.jpg",
+    "https://raw.githubusercontent.com/xvsanuj/MonsterReimagineRound2/main/src/assets/Images/Home/10.jpg",
   ];
   const textOptions = [
     ["every shot iconic", "glossy shots", "supportive ui", "no1 brand"],
@@ -38,6 +38,7 @@ const Home = () => {
   const [zoomClass, setZoomClass] = useState(false);
   const [zoomClassSide, setZoomClassSide] = useState(false);
   const [zoomClassSideOne, setZoomClassSideOne] = useState(false);
+
   useEffect(() => {
     const animateText = () => {
       const h1s = document.querySelectorAll(".teleTexts h1");
@@ -82,6 +83,7 @@ const Home = () => {
       clearInterval(sideIntervalOne);
     };
   }, []);
+  
   useEffect(() => {
     gsap.fromTo(".teleTexts h1", 
       { y: 50, opacity: 0 }, 
@@ -92,32 +94,33 @@ const Home = () => {
       { y: 0, opacity: 1, duration: 0.5, stagger: .1 }
     );
   }, [currentHeadImage]);
+
   return (
-    <div className='h-[90vh] w-full'>
+    <div className='lg:h-[90vh] relative w-full'>
       <div className='flex flex-col lg:flex-row gap-[1%] h-full'>
         <div className='h-full w-full lg:w-[59.5%] flex flex-col lg:flex-row'>
           <div className='w-full lg:w-1/2 h-full'>
-            <div className='h-1/2 border-b-[1px] border-zinc-800 w-full flex flex-col items-center justify-center'>
-              <h1 className='text-3xl sm:text-4xl lg:text-6xl font-black'>Xiaomi</h1>
+            <div className='h-1/2 hidden lg:flex border-b-[1px] border-zinc-800 w-full flex-col items-center justify-center'>
+              <h1 className='text-4xl sm:text-4xl lg:text-6xl font-black'>Xiaomi</h1>
               <p className={`tagline text-sm transition-transform duration-[2.5s] ease-out ${zoomClass ? 'scale-110' : ''}`}>{taglineOptions[currentHeadImage]}</p>
             </div>
-            <div className='h-1/2 border-b-[1px] border-zinc-800 w-full px-5 sm:px-10 lg:px-20 flex justify-center flex-col gap-6'>
+            <div className='h-1/2 hidden lg:flex border-b-[1px] border-zinc-800 w-full px-5 sm:px-10 lg:px-20 justify-center flex-col gap-6'>
               <p className='leading-none text-center sm:text-left'>Get Attractive Offers For Your First Purchase.</p>
               <button className='px-6 py-2 mb-5 rounded-md bg-zinc-200 text-black hover:border-[1px] hover:border-white hover:bg-[#111] hover:text-white transition-all duration-200'>Explore Now</button>
             </div>
           </div>
           <div className='relative overflow-hidden w-full lg:w-1/2 h-full border-x-[1px] border-zinc-800'>
-            <img className={`h-full w-full object-cover transition-transform duration-[2.5s] ease-out ${zoomClass ? 'scale-110' : ''}`} src={mainImages[currentHeadImage]} alt="" />
+            <img className={`h-[80vh] lg:h-full w-full object-cover transition-transform duration-[2.5s] ease-out ${zoomClass ? 'scale-110' : ''}`} src={mainImages[currentHeadImage]} alt="" />
             <div className='absolute bg-[#55504c] bottom-5 left-5 h-28 w-68 lg:w-72 sm:block rounded-md overflow-hidden'>
               <div className="teleTexts h-10 flex items-center w-full bg-[#55504c] flex-col overflow-hidden">
-                <h1 className='font-normal w-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-wide lg:tracking-tighter pt-3'>{textOptions[currentHeadImage][0]}</h1>
-                <h1 className='font-normal w-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-wide lg:tracking-tighter pt-3'>{textOptions[currentHeadImage][1]}</h1>
-                <h1 className='font-normal w-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-wide lg:tracking-tighter pt-3'>{textOptions[currentHeadImage][2]}</h1>
-                <h1 className='font-normal w-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-wide lg:tracking-tighter pt-3'>{textOptions[currentHeadImage][3]}</h1>
+                <h1 className='font-normal w-0 ml-4 mt-1 lg:ml-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-tighter pt-3'>{textOptions[currentHeadImage][0]}</h1>
+                <h1 className='font-normal w-0 ml-4 mt-1 lg:ml-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-tighter pt-3'>{textOptions[currentHeadImage][1]}</h1>
+                <h1 className='font-normal w-0 ml-4 mt-1 lg:ml-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-tighter pt-3'>{textOptions[currentHeadImage][2]}</h1>
+                <h1 className='font-normal w-0 ml-4 mt-1 lg:ml-0 whitespace-nowrap mr-60 uppercase text-xl lg:text-2xl tracking-tighter pt-3'>{textOptions[currentHeadImage][3]}</h1>
               </div>
               <span className='h-[1px] w-[90%] lg:w-[80%] bg-zinc-200 inline-block lg:mx-5 mx-3'></span>
               <div className='flex items-center bg-[#55504c] lg:px-5 px-2 justify-between lg:my-0 my-2'>
-                <h1 className='bg-[#55504c] leading-8'>Quick View</h1>
+                <h1 className='bg-[#55504c] leading-8 ml-3 lg:ml-0'>Quick View</h1>
                 <button className='bg-[#55504c] px-6 py-1 border-[1px] rounded-full mr-4 hover:bg-white hover:text-black transition-all duration-200'>Buy Now</button>
               </div>
             </div>
@@ -125,10 +128,10 @@ const Home = () => {
         </div>
         <div className='h-full flex w-full lg:w-[39.5%] border-x-[1px] border-zinc-800 flex-col lg:flex-row'>
           <div className='w-full lg:w-[80%] h-full flex flex-col gap-[3%] border-r-[1px] border-zinc-800'>
-            <div className='h-[59%] w-full border-b-[1px] overflow-hidden border-zinc-800'>
+            <div className='h-[59%] hidden lg:block w-full border-b-[1px] overflow-hidden border-zinc-800'>
               <img className={`h-full w-full object-cover transition-transform duration-[2.5s] ease-out ${zoomClassSide ? 'scale-110' : ''}`} src={sideImages[currentSideImage]} alt="" />
             </div>
-            <div className='h-[38%] w-full border-y-[1px] overflow-hidden border-zinc-800'>
+            <div className='h-[38%] hidden lg:block w-full border-y-[1px] overflow-hidden border-zinc-800'>
               <img className={`h-full w-full object-cover object-top transition-transform duration-[2.5s] ease-out ${zoomClassSideOne ? 'scale-110' : ''}`} src={sideImagesOne[currentSideImageOne]} alt="" />
             </div>
           </div>
