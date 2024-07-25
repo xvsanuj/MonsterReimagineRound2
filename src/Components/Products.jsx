@@ -1,8 +1,6 @@
-import React from 'react'
-
 const Products = () => {
   return (
-    <div className='min-h-screen relative w-full px-10 lg:px-20 pt-20'>
+    <div className='min-h-screen relative mb-[10vh] w-full px-10 lg:px-20 pt-20'>
       <p className='px-6 py-2 text-sm rounded-full bg- border-[1px] border-white w-fit'>Products</p>
       <h1 className='w-0 whitespace-nowrap pt-5 font-[Monument] text-2xl lg:text-4xl monument'>Newly Launched</h1>
       <div className='pt-20 flex flex-col lg:flex-row gap-6'>
