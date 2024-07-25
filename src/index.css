@@ -85,3 +85,26 @@
   background-size: cover;
   background-position: center;
 }
+
+.link {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 0.1rem;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px; /* Height of the underline */
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

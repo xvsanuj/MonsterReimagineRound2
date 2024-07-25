@@ -136,7 +136,7 @@ const Navbar = () => {
       </div>
       <div className="hidden w-[50%] lg:flex justify-center gap-6">
         {navLinks.map((link, index) => (
-          <h1 key={index} className="cursor-pointer text-sm">
+          <h1 key={index} className="cursor-pointer text-sm link w-fit">
             {link}
           </h1>
         ))}

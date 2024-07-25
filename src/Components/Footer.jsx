@@ -1,58 +1,59 @@
 import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+
 const Footer = () => {
     return (
       <div className='w-full h-[90vh] flex flex-col lg:flex-row'>
         <div className='w-full lg:w-[70%] h-full flex flex-col lg:flex-row pl-4 lg:pl-20 pt-8 lg:pt-16'>
-          <div className='w-full lg:w-[20%] mb-6 lg:mb-0'>
+          <div className='w-full lg:w-[20%] mb-6 lg:mb-0 footer-column'>
             <h1 className='text-lg font-semibold tracking-tighter'>Support</h1>
-            <p className='text-sm py-2'>Online Help</p>
-            <p className='text-sm py-2'>Customer Service</p>
-            <p className='text-sm py-2'>Shipping FAQ</p>
-            <p className='text-sm py-2'>Warranty</p>
-            <p className='text-sm py-2'>Mi Exchange</p>
-            <p className='text-sm py-2'>Bulk Orders</p>
-            <p className='text-sm py-2'>User Guide</p>
-            <p className='text-sm py-2'>Laptop Drivers</p>
-            <p className='text-sm py-2'>Mi Screen Protect</p>
-            <p className='text-sm py-2'>Mi Complete Protect</p>
-            <p className='text-sm py-2'>Certification</p>
-            <p className='text-sm py-2'>Service Centre</p>
-            <p className='text-sm py-2'>Xiaomi Easy Service</p>
+            <p className='text-sm py-2 link w-fit'>Online Help</p>
+            <p className='text-sm py-2 link w-fit'>Customer Service</p>
+            <p className='text-sm py-2 link w-fit'>Shipping FAQ</p>
+            <p className='text-sm py-2 link w-fit'>Warranty</p>
+            <p className='text-sm py-2 link w-fit'>Mi Exchange</p>
+            <p className='text-sm py-2 link w-fit'>Bulk Orders</p>
+            <p className='text-sm py-2 link w-fit'>User Guide</p>
+            <p className='text-sm py-2 link w-fit'>Laptop Drivers</p>
+            <p className='text-sm py-2 link w-fit'>Mi Screen Protect</p>
+            <p className='text-sm py-2 link w-fit'>Mi Complete Protect</p>
+            <p className='text-sm py-2 link w-fit'>Certification</p>
+            <p className='text-sm py-2 link w-fit'>Service Centre</p>
+            <p className='text-sm py-2 link w-fit'>Xiaomi Easy Service</p>
           </div>
-          <div className='w-full lg:w-[20%] mb-6 lg:mb-0'>
+          <div className='w-full lg:w-[20%] mb-6 lg:mb-0 footer-column'>
             <h1 className='text-lg font-semibold tracking-tighter'>Shop And Learn</h1>
-            <p className='text-sm py-2'>Xiaomi Phones</p>
-            <p className='text-sm py-2'>Redmi Phones</p>
-            <p className='text-sm py-2'>TV's</p>
-            <p className='text-sm py-2'>Laptops And Tablets</p>
-            <p className='text-sm py-2'>Audio</p>
-            <p className='text-sm py-2'>LifeStyle</p>
-            <p className='text-sm py-2'>Smart Home</p>
+            <p className='text-sm py-2 link w-fit'>Xiaomi Phones</p>
+            <p className='text-sm py-2 link w-fit'>Redmi Phones</p>
+            <p className='text-sm py-2 link w-fit'>TV's</p>
+            <p className='text-sm py-2 link w-fit'>Laptops And Tablets</p>
+            <p className='text-sm py-2 link w-fit'>Audio</p>
+            <p className='text-sm py-2 link w-fit'>LifeStyle</p>
+            <p className='text-sm py-2 link w-fit'>Smart Home</p>
           </div>
-          <div className='w-full lg:w-[20%] mb-6 lg:mb-0'>
+          <div className='w-full lg:w-[20%] mb-6 lg:mb-0 footer-column'>
             <h1 className='text-lg font-semibold tracking-tighter'>Retail Store</h1>
-            <p className='text-sm py-2'>Mi Home</p>
-            <p className='text-sm py-2'>Mi Authorized Store</p>
-            <p className='text-sm py-2'>Mi Store Franchise</p>
+            <p className='text-sm py-2 link w-fit'>Mi Home</p>
+            <p className='text-sm py-2 link w-fit'>Mi Authorized Store</p>
+            <p className='text-sm py-2 link w-fit'>Mi Store Franchise</p>
           </div>
-          <div className='w-full lg:w-[20%]'>
+          <div className='w-full lg:w-[20%] footer-column'>
             <h1 className='text-lg font-semibold tracking-tighter'>About</h1>
-            <p className='text-sm py-2'>Xiaomi</p>
-            <p className='text-sm py-2'>Privacy Policy</p>
-            <p className='text-sm py-2'>User Agreement</p>
-            <p className='text-sm py-2'>Integrity And Compliance</p>
-            <p className='text-sm py-2'>CSR And Disclosures</p>
-            <p className='text-sm py-2'>E-Waste Management</p>
-            <p className='text-sm py-2'>In The Past</p>
-            <p className='text-sm py-2'>Trust Center</p>
-            <p className='text-sm py-2'>Culture</p>
-            <p className='text-sm py-2'>Smartphone Quality</p>
-            <p className='text-sm py-2'>TV Quality</p>
-            <p className='text-sm py-2'>Service Quality</p>
-            <p className='text-sm py-2'>Xiaomi HyperOS</p>
-            <p className='text-sm py-2'>Join Our Team</p>
+            <p className='text-sm py-2 link w-fit'>Xiaomi</p>
+            <p className='text-sm py-2 link w-fit'>Privacy Policy</p>
+            <p className='text-sm py-2 link w-fit'>User Agreement</p>
+            <p className='text-sm py-2 link w-fit'>Integrity And Compliance</p>
+            <p className='text-sm py-2 link w-fit'>CSR And Disclosures</p>
+            <p className='text-sm py-2 link w-fit'>E-Waste Management</p>
+            <p className='text-sm py-2 link w-fit'>In The Past</p>
+            <p className='text-sm py-2 link w-fit'>Trust Center</p>
+            <p className='text-sm py-2 link w-fit'>Culture</p>
+            <p className='text-sm py-2 link w-fit'>Smartphone Quality</p>
+            <p className='text-sm py-2 link w-fit'>TV Quality</p>
+            <p className='text-sm py-2 link w-fit'>Service Quality</p>
+            <p className='text-sm py-2 link w-fit'>Xiaomi HyperOS</p>
+            <p className='text-sm py-2 link w-fit'>Join Our Team</p>
           </div>
         </div>
         <div className='w-full lg:w-[30%] h-full flex flex-col items-start px-4 lg:px-0'>
@@ -75,5 +76,6 @@ const Footer = () => {
         </div>
       </div>
     );
-  };
-export default Footer
+};
+
+export default Footer;
