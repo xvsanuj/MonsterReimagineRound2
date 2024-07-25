@@ -103,7 +103,7 @@ const Home = () => {
     // Ensure text is visible and ready before starting animation
     gsap.fromTo(".teleTexts h1", 
       { y: 50, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 0.5, stagger: 0.1 }
+      { y: 0, opacity: 1, duration: 1, stagger: 0.1 }
     );
     gsap.fromTo(".tagline", 
       { y: 50, opacity: 0 }, 
