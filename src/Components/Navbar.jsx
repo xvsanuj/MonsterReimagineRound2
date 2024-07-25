@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="bg-black">
-          <div className="bg-black flex gap-4 absolute lg:top-24 z-50 lg:right-24 right-20">
+          <div className="bg-black flex gap-4 absolute lg:top-[6vw] z-50 lg:right-24 right-20">
             <span className="p-4 rounded-full"><FaFacebookF /></span>
             <span className="p-4 rounded-full"><FaInstagram /></span>
             <span className="p-4 rounded-full"><FaLinkedinIn /></span>
