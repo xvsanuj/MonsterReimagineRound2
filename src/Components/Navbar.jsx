@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="bg-black lg:mt-32 mt-24 navLinks">
             {navli.map((item, index) => (
               <div key={index} className="bg-black overflow-hidden lg:h-[9.5vh] w-fit">
-                <a href="#" className="w-fit bg-black whitespace-nowrap mx-16 lg:mx-40 text-2xl lg:text-5xl my-5 font-semibold tracking-tighter cursor-pointer link">{item}</a>
+                <a href="#" className="w-fit bg-black whitespace-nowrap mx-16 lg:mx-40 text-2xl lg:text-[3vw] my-5 font-semibold tracking-tighter cursor-pointer link">{item}</a>
               </div>
             ))}
           </div>
